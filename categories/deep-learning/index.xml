@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Vision Shrimp</title>
-    <link>https://Philipshrimp.github.io/</link>
-    <description>Recent content on Vision Shrimp</description>
+    <title>Deep Learning on Vision Shrimp</title>
+    <link>https://Philipshrimp.github.io/categories/deep-learning/</link>
+    <description>Recent content in Deep Learning on Vision Shrimp</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 28 Jun 2022 20:25:21 +0900</lastBuildDate><atom:link href="https://Philipshrimp.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 28 Jun 2022 20:25:21 +0900</lastBuildDate><atom:link href="https://Philipshrimp.github.io/categories/deep-learning/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CNN의 기본적인 구조 및 원리</title>
       <link>https://Philipshrimp.github.io/posts/neural_networks/cnn_basics/</link>
