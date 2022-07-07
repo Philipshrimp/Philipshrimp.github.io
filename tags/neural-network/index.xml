@@ -6,8 +6,7 @@
     <description>Recent content in Neural Network on Vision Shrimp</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 28 Jun 2022 20:25:21 +0900</lastBuildDate><atom:link href="https://Philipshrimp.github.io/tags/neural-network/index.xml" rel="self" type="application/rss+xml" />
-    <item>
+    <lastBuildDate>Tue, 28 Jun 2022 20:25:21 +0900</lastBuildDate><atom:link href="https://Philipshrimp.github.io/tags/neural-network/index.xml" rel="self" type="application/rss+xml" /><item>
       <title>CNN의 기본적인 구조 및 원리</title>
       <link>https://Philipshrimp.github.io/posts/neural_networks/cnn_basics/</link>
       <pubDate>Tue, 28 Jun 2022 20:25:21 +0900</pubDate>
@@ -18,6 +17,7 @@
 이름 그대로,
 기존에 나온 Fully connected layer 기반의 네트워크 대비 CNN은 다음과 같은 차별점을 가지고 있다.</description>
     </item>
+    
     
   </channel>
 </rss>
