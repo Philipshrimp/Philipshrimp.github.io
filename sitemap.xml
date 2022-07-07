@@ -111,10 +111,26 @@
     <loc>https://Philipshrimp.github.io/</loc>
     <lastmod>2010-06-08T08:06:25+06:00</lastmod>
   </url><url>
+    <loc>https://Philipshrimp.github.io/posts/3d_vision/</loc>
+  </url><url>
     <loc>https://Philipshrimp.github.io/categories/</loc>
+  </url><url>
+    <loc>https://Philipshrimp.github.io/posts/computer_vision/</loc>
+  </url><url>
+    <loc>https://Philipshrimp.github.io/posts/depth_estimation/</loc>
+  </url><url>
+    <loc>https://Philipshrimp.github.io/posts/development/</loc>
+  </url><url>
+    <loc>https://Philipshrimp.github.io/posts/image_processing/</loc>
+  </url><url>
+    <loc>https://Philipshrimp.github.io/posts/neural_networks/</loc>
+  </url><url>
+    <loc>https://Philipshrimp.github.io/posts/object_detection/</loc>
   </url><url>
     <loc>https://Philipshrimp.github.io/search/</loc>
     <priority>0.1</priority>
+  </url><url>
+    <loc>https://Philipshrimp.github.io/posts/slam/</loc>
   </url><url>
     <loc>https://Philipshrimp.github.io/tags/</loc>
   </url>
