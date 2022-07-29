@@ -21,6 +21,8 @@
 
 
 
+<link rel="stylesheet" href="/css/colortheme/colortheme.css"/>
+
 
 
 
@@ -86,6 +88,27 @@ Initial setup Search depends on additional output content type of JSON in config
       <ul class="navbar-nav ml-auto">
       
       
+        <li class="nav-item dropdown">
+
+<div id="theme-initialization" style="display: none;"
+  default-theme="system"></div>
+<a class="nav-link dropdown-toggle"  href="#" id="themeSelector" role="button"
+  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <img id="navbar-theme-icon-svg" src="/icons/moon-svgrepo-com.svg" width=20>
+</a>
+<div class="dropdown-menu dropdown-menu-icons-only" aria-labelledby="themeSelector">
+  <a class="dropdown-item nav-link" href="#" onclick="enableLightTheme()">
+    <img class="menu-icon-center" src="/icons/sun-svgrepo-com.svg" width=20>
+  </a>
+  <a class="dropdown-item nav-link" href="#" onclick="enableDarkTheme()">
+    <img class="menu-icon-center" src="/icons/moon-svgrepo-com.svg" width=20>
+  </a>
+  <a class="dropdown-item nav-link" href="#" onclick="useSystemTheme()">
+    <img class="menu-icon-center" src="/icons/computer-svgrepo-com.svg" width=20>
+  </a>
+</div>
+</li>
+      
       </ul>
     </div>
   </div>
@@ -118,7 +141,23 @@ Initial setup Search depends on additional output content type of JSON in config
   
   
     
-    <li><a class="" href="/posts/neural_networks/" title="Neural Networks">Neural Networks</a></li>
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/neural_networks/">Neural Networks</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/neural_networks/cnn_basics/" title="CNN의 기본적인 구조 및 원리">CNN의 기본적인 구조 및 원리</a></li>
+  
+
+
+      </ul>
+    </li>
   
 
 
@@ -325,6 +364,11 @@ Initial setup Search depends on additional output content type of JSON in config
 <script type="text/javascript" src="/js/navbar.js"></script>
 <script type="text/javascript" src="/js/plyr.js"></script>
 <script type="text/javascript" src="/js/main.js"></script>
+
+
+
+<script type="text/javascript" src="/js/darkreader.js"></script>
+<script type="text/javascript" src="/js/darkmode-darkreader.js"></script>
 
 
 
