@@ -6,7 +6,16 @@
     <description>Recent content on Vision Shrimp</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 08 Jun 2010 08:06:25 +0600</lastBuildDate><atom:link href="https://Philipshrimp.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 04 Aug 2022 14:52:09 +0900</lastBuildDate><atom:link href="https://Philipshrimp.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+      <title>CNN의 기본적인 구조 및 원리 - 1</title>
+      <link>https://Philipshrimp.github.io/posts/neural_networks/cnn_basics/</link>
+      <pubDate>Thu, 04 Aug 2022 14:52:09 +0900</pubDate>
+      
+      <guid>https://Philipshrimp.github.io/posts/neural_networks/cnn_basics/</guid>
+      <description>처음 회사에서 인공지능 업무를 배정받기 이전에, 기본적인 CNN 구조에 대해 확실히 알고 가야 제대로 활용할 수 있겠다는 이야기를 듣고 CNN 구조부터 확실히 짚어가기 위해 기본적인 구조에 대한 학습을 시작했다. 이 포스트는 사내에서 세미나를 진행했던 CNN 기초를 다시 복습할 겸 저장하는 블로그 글이다. 사실 세미나를 진행한 시기는 올해 초이기 때문에 굉장히 오래됐고, 글 자체도 그 때 당시에 정리했던 ppt나 노션 등을 나름 잘 정리해서 적어보는 글인데, 누락된 부분이나 잘못 적거나 부실하게 설명한 부분이 있을 수 있다.</description>
+    </item>
+    
+    
     
     
     
