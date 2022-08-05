@@ -406,7 +406,7 @@ convolution layer에서는 입력으로 들어온 map과 해당 layer에 주어�
 대표적으로는 Average pooling과 Max pooling을 사용한다. Average pooling은 pooling을 적용할 filter 크기 내에 속한 값들의 평균을 output으로 출력하는 방법이고, max pooling은 이들 중 가장 큰 값을 output으로 출력하는 방법이다. pooling 방법에 대한 추세를 보면 오래 전에는 average pooling을 자주 사용해왔지만, 선호도가 차츰 max pooling으로 치우쳐갔다고 한다. 더 나중의 이야기인데, 이 max pooling도 사실상 영역 내 최댓값만 보기 때문에 다른 값들은 보지 않게 되어 이로 인해서 또 오버핏팅이 야기하는 경우도 있었다고 한다. 나중에 Pooling layer 자체를 제거하기 시작한 이유이기도 한데, 이에 관해서는 후발 연구들을 보며 확인을 해야겠다.<br>
 <div style="margin-top: 3rem;"></div></p>
 <h5 id="pooling-layer의-back-propagation">Pooling layer의 back-propagation</h5>
-<p><img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/c65daacb-e41d-4356-834c-39cee6418999/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220804%2Fus-west-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20220804T021744Z&amp;X-Amz-Expires=86400&amp;X-Amz-Signature=f43de61b028a92bdec47e3fddb6aaaff555a36c48f1b3abcaa896c892bb5274e&amp;X-Amz-SignedHeaders=host&amp;response-content-disposition=filename%20%3D%22Untitled.png%22&amp;x-id=GetObject"
+<p><img src="http://i.imgur.com/m9gOiuc.png"
     
     
         width="600"
@@ -421,7 +421,7 @@ convolution layer에서는 입력으로 들어온 map과 해당 layer에 주어�
 <div style="margin-top: 3rem;"></div>
 위 그림은 Max pooling의 역전파 과정을 나타낸다. 뒷 레이어로부터 역전파된 gradient 값이 각각 delta_1, delta_2라고 할 때, 역전파를 통해 이전 영역으로 전파된 값을 delta_11, delta_12, delta_21, delta_22라고 하자. 그림 상에서는 max pooling이 두 개의 neuron으로부터 나온 결과로 표현되어 있다. 즉, max pooling은 두 개의 neuron 값 들로부터 가장 큰 값을 가져오게 된다는 말이다. 만약 윗 neuron 값이 max 값이어서 해당 값만을 pooling을 통해 가져왔다면 아랫 neuron은 사실상 의미가 없는 값이나 다름없게 된다. 따라서 이 pooling에 대해 반대로 역전파를 하게 되었을 땐 max 값이 있던 neuron에 대해서만 local gradient 가중치를 1로 주어 이전 delta 값을 역전파시키고, 다른 neuron에 대해서는 local gradient 가중치를 0으로 주어 이전 delta 값을 역으로 전달하지 않게 된다. <em><strong>(사실 이 부분을 읽으면서 들었던 의문점은 max 값이 어디서부터 온 것인지 그 위치에 대한 정보도 결국 기억해야 하는가라는 의문이 생겼습니다. 제가 그 과정 하나하나에 대한 이해가 짧아서 그럴 수 있는데, 아시는 분 댓글로 알려주시면 감사하겠습니다 ㅠㅠ)</strong></em> <br>
 <div style="margin-top: 3rem;"></div></p>
-<p><img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/ce81c126-b633-4c10-be0e-763f6fb2d531/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220804%2Fus-west-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20220804T013019Z&amp;X-Amz-Expires=86400&amp;X-Amz-Signature=d3b89acb051bd7d21e4c7f175d0b6f2f047f54a044f93901de759fa09230a85c&amp;X-Amz-SignedHeaders=host&amp;response-content-disposition=filename%20%3D%22Untitled.png%22&amp;x-id=GetObject"
+<p><img src="http://i.imgur.com/xaFjFuC.png"
     
     
         width="600"
