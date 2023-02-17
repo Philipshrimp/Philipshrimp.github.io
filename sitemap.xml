@@ -127,22 +127,67 @@
     <changefreq>monthly</changefreq>
     <priority>0.1</priority>
   </url><url>
-    <loc>https://Philipshrimp.github.io/categories/</loc>
-    <lastmod>2022-08-04T14:52:09+09:00</lastmod>
+    <loc>https://Philipshrimp.github.io/posts/nerf/barf/</loc>
+    <lastmod>2023-02-17T09:52:20+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://Philipshrimp.github.io/posts/neural_networks/cnn_basics/</loc>
-    <lastmod>2022-08-04T14:52:09+09:00</lastmod>
+    <loc>https://Philipshrimp.github.io/tags/bundle-adjustment/</loc>
+    <lastmod>2023-02-17T09:52:20+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://Philipshrimp.github.io/categories/</loc>
+    <lastmod>2023-02-17T09:52:20+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://Philipshrimp.github.io/tags/deep-learning/</loc>
-    <lastmod>2022-08-04T14:52:09+09:00</lastmod>
+    <lastmod>2023-02-17T09:52:20+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://Philipshrimp.github.io/tags/nerf/</loc>
+    <lastmod>2023-02-17T09:52:20+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://Philipshrimp.github.io/categories/nerf/</loc>
+    <lastmod>2023-02-17T09:52:20+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://Philipshrimp.github.io/tags/neural-network/</loc>
+    <lastmod>2023-02-17T09:52:20+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://Philipshrimp.github.io/tags/neural-rendering/</loc>
+    <lastmod>2023-02-17T09:52:20+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://Philipshrimp.github.io/tags/pose-estimation/</loc>
+    <lastmod>2023-02-17T09:52:20+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://Philipshrimp.github.io/posts/</loc>
+    <lastmod>2023-02-17T09:52:20+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://Philipshrimp.github.io/tags/</loc>
+    <lastmod>2023-02-17T09:52:20+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://Philipshrimp.github.io/</loc>
+    <lastmod>2023-02-17T09:52:20+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://Philipshrimp.github.io/posts/neural_networks/cnn_basics/</loc>
     <lastmod>2022-08-04T14:52:09+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -153,21 +198,6 @@
     <priority>0.5</priority>
   </url><url>
     <loc>https://Philipshrimp.github.io/posts/neural_networks/</loc>
-    <lastmod>2022-08-04T14:52:09+09:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://Philipshrimp.github.io/posts/</loc>
-    <lastmod>2022-08-04T14:52:09+09:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://Philipshrimp.github.io/tags/</loc>
-    <lastmod>2022-08-04T14:52:09+09:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://Philipshrimp.github.io/</loc>
     <lastmod>2022-08-04T14:52:09+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

@@ -6,7 +6,18 @@
     <description>Recent content in Posts on Vision Shrimp</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 04 Aug 2022 14:52:09 +0900</lastBuildDate><atom:link href="https://Philipshrimp.github.io/posts/index.xml" rel="self" type="application/rss+xml" /><item>
+    <lastBuildDate>Fri, 17 Feb 2023 09:52:20 +0900</lastBuildDate><atom:link href="https://Philipshrimp.github.io/posts/index.xml" rel="self" type="application/rss+xml" /><item>
+      <title>BARF : Bundle-Adjusting Neural Radiance Fields</title>
+      <link>https://Philipshrimp.github.io/posts/nerf/barf/</link>
+      <pubDate>Fri, 17 Feb 2023 09:52:20 +0900</pubDate>
+      
+      <guid>https://Philipshrimp.github.io/posts/nerf/barf/</guid>
+      <description>해당 논문에 대한 리뷰 영상은 아래 동영상을 통해서도 확인하실 수 있습니다.   
+Intro  
+Original NeRF 논문은 처음 ECCV 2020에서 발표되었을 때, 뉴럴 렌더링 부분에 있어 굉장히 큰 화두가 되었다. 그와 동시에 많은 한계점들을 가지고 있어서 많은 연구자들로부터 그 문제점들이 지속적으로 지적되어 왔다. 이번에 리뷰할 BARF 논문에서는 그 중에서 Original NeRF가 입력 데이터로 정확한 Camera pose를 요구하고 있다는 점을 지적하고 있는데, 다시 말하면 입력 이미지 데이터와 한 쌍으로 있을 transformation 값이 부정확하거나 알 수 없을 경우에는 뉴럴 렌더링의 정확도가 떨어지게 된다는 것이다.</description>
+    </item>
+    
+    <item>
       <title>CNN의 기본적인 구조 및 원리 - 1</title>
       <link>https://Philipshrimp.github.io/posts/neural_networks/cnn_basics/</link>
       <pubDate>Thu, 04 Aug 2022 14:52:09 +0900</pubDate>
