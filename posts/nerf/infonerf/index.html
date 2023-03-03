@@ -321,7 +321,140 @@ Motivation 이 논문의 목적은 Entropy 개념을 이용하여 regularization
 >
 
 <div style="margin-top: 3rem;"></div>
-위 표는 360도 synthetic data로부터 4개의 view를 샘플링하여 novel view synthesis를 수행한 결과를 나타낸다. (cont&rsquo;d)</p>
+위 표는 360도 synthetic data로부터 4개의 view를 샘플링하여 novel view synthesis를 수행한 결과를 나타낸다. 100개 view를 통해 novel view synthesis를 진행한 NeRF와 결과치를 비교하고 있는데, 4개 view로 렌더링을 한 NeRF뿐만 아니라 PixelNeRF나 DietNeRF와 비교했을때도 더 높은 수치의 정확도를 보여주고 있음을 알 수 있다.
+<div style="margin-top: 3rem;"></div></p>
+<p><img src="/images/infonerf_results001.jpg"
+    
+    
+        width="500"
+    
+    
+    
+    
+        class="center"
+    
+>
+
+<img src="/images/infonerf_results002.jpg"
+    
+    
+        width="800"
+    
+    
+    
+    
+        class="center"
+    
+>
+
+<div style="margin-top: 3rem;"></div>
+다음 실험은 추가로 Neural volumes(이하 NV) 논문과 Neural body(이하 NB) 논문, 그리고 NeRF를 비교군으로 하여 사람 객체에 대한 뉴럴 렌더링을 수행한 결과를 보여준다. 참고로 NB에 Prior가 들어가 있는데, 이는 Geometric prior가 사전에 들어가서 높은 정확도로 렌더링을 하기 위함이다. 이 실험의 목적은 geometric prior가 들어간 알고리즘과 비교했을 때, 4 view 기반 뉴럴 렌더링이 얼마나 잘 되는지를 비교하기 위한 실험으로 보이는데, NeRF나 NV에 비해서는 유실된 부분이 거의 없다시피하며 실제 ground truth의 외형을 잘 그려내려고 하는 것을 확인할 수 있었다.
+<div style="margin-top: 3rem;"></div></p>
+<p><img src="/images/infonerf_results003.jpg"
+    
+    
+        width="900"
+    
+    
+    
+    
+        class="center"
+    
+>
+
+<div style="margin-top: 3rem;"></div>
+좀 더 복잡한 scene에서의 뉴럴 렌더링 결과 또한 4 view에서도 잘 나오고 있었으며
+<div style="margin-top: 3rem;"></div></p>
+<p><img src="/images/infonerf_results004.jpg"
+    
+    
+        width="900"
+    
+    
+    
+    
+        class="center"
+    
+>
+
+<div style="margin-top: 3rem;"></div>
+Unseen viewpoint 갯수가 렌더링에 미치는 영향을 보여주기 위해 unseen ray를 늘려가며 결과를 비교했다. 1024개 이상으로 unseen ray를 추가하니 그 이상 성능 향상이 보이지는 않았다. 수치상으로는 큰 변화가 있는 것 같지는 않으나, 그림 (a)와 (b)를 비교했을 때 artifact가 많이 줄어든 것을 확인할 수 있었다.
+<div style="margin-top: 3rem;"></div></p>
+<p><img src="/images/infonerf_results005.jpg"
+    
+    
+        width="900"
+    
+    
+    
+    
+        class="center"
+    
+>
+
+<div style="margin-top: 3rem;"></div>
+Entropy loss와 Information gain loss를 추가했을 때의 성능 변화는 위 실험 결과에서 확인할 수 있다. 특히, Entropy loss 유무에 따른 수치 차이가 더 벌어짐을 확인할 수 있었다.
+<div style="margin-top: 3rem;"></div></p>
+<p><img src="/images/infonerf_results007.jpg"
+    
+    
+        width="900"
+    
+    
+    
+    
+        class="center"
+    
+>
+
+<div style="margin-top: 3rem;"></div>
+해당 결과를 그림으로 나타내고 있는데, Information gain loss만 없는 경우보다 entropy loss만 없는 경우가 더 유실된 영역이 많았다. entropy loss가 없는 few-shot NeRF는 애초에 noisy reconstruction 결과가 나오기 때문에 이 상황에서 neighboring 간의 density 차이 최소화를 하는 information gain loss는 의미가 없기 때문이다.
+<div style="margin-top: 3rem;"></div></p>
+<p><img src="/images/infonerf_results006.jpg"
+    
+    
+        width="900"
+    
+    
+    
+    
+        class="center"
+    
+>
+
+<div style="margin-top: 3rem;"></div>
+다음은 Information gain loss의 효과를 baseline에 따라 비교한 결과를 나타낸다. 위에서 말하는 narrow-baseline과 wide-baseline은 viewpoint 변화가 좁고 넓음의 차이에 대한 것을 나타낸다. Wide baseline에서는 Information gain loss가 있건 없건 큰 차이를 보이진 않았으나, narrow baseline에서는 성능 차이가 조금 더 크게 나는 것을 볼 수 있었다.
+<div style="margin-top: 3rem;"></div></p>
+<p><img src="/images/infonerf_results008.jpg"
+    
+    
+        width="900"
+    
+    
+    
+    
+        class="center"
+    
+>
+
+<div style="margin-top: 3rem;"></div>
+위 결과는 InfoNeRF를 PixelNeRF나 MipNeRF같은 다른 방법론에 함께 적용한 결과를 보여준다. InfoNeRF는 앞서 언급했듯이 다른 모듈이 추가된 것이 아니라 loss term만 추가되었기 때문에 다른 NeRF 알고리즘에 적용하기 좋다는 장점이 있다.
+<div style="margin-top: 3rem;"></div></p>
+<p><img src="/images/infonerf_results009.jpg"
+    
+    
+        width="900"
+    
+    
+    
+    
+        class="center"
+    
+>
+
+<div style="margin-top: 3rem;"></div>
+결과가 궁금해서 소스 코드를 직접 돌려봤는데, 이 렌더링 결과가 고작 4개의 view를 50,000번의 iteration만 돌려서 나온 결과라는 사실에 적잖이 놀랐다.
+<div style="margin-top: 3rem;"></div></p>
 
         </div>
 
