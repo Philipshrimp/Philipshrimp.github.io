@@ -30,10 +30,21 @@
 
 
 
-</head>
+<script>
+      theme = localStorage.getItem('darkmode:color-scheme') || 'system';
+      if (theme == 'system') {
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          theme = 'dark';
+        } else {
+          theme = 'light';
+        }
+      }
+      document.documentElement.setAttribute('data-theme', theme);
+    </script>
+  </head>
 
-  <body class="type-tags kind-term" data-spy="scroll" data-target="#TableOfContents" data-offset="80">
-    <div class="container-fluid bg-dimmed wrapper">
+  <body class="type-tags kind-term" data-bs-spy="scroll" data-bs-target="#TableOfContents" data-bs-offset="80">
+    <div class="container-fluid bg-secondary wrapper">
       
       
     
@@ -43,27 +54,116 @@
 
 
 
+  
 
 
 
 
 
 
-<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+<nav class="navbar navbar-expand-xl top-navbar shadow " id="top-navbar">
   <div class="container">
-      <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button">
-      <span class="navbar-toggler-icon"></span>
+    
+    <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button">
+      <i data-feather="sidebar"></i>
     </button>
+    
     <a class="navbar-brand" href="/">
       Vision Shrimp</a>
-    <button class="navbar-toggler navbar-light" id="toc-toggler" type="button">
-      <span class="navbar-toggler-icon"></span>
+    <button
+      class="navbar-toggler navbar-light"
+      id="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#top-nav-items"
+      aria-label="menu"
+    >
+      <i data-feather="menu"></i>
     </button>
 
-    <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
-      <ul class="navbar-nav ml-auto">
-      
-      
+    <div class="collapse navbar-collapse dynamic-navbar" id="top-nav-items">
+      <ul class="nav navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/#home">Home</a>
+        </li>
+        
+          
+          
+            
+              
+              
+                <li class="nav-item">
+                  <a class="nav-link" href="/#recent-posts">Recent Posts</a>
+                </li>
+              
+            
+            
+              
+              
+                <li class="nav-item">
+                  <a class="nav-link" href="/#about">About</a>
+                </li>
+              
+            
+            
+            
+              
+              
+                <li class="nav-item">
+                  <a class="nav-link" href="/#experiences">Experiences</a>
+                </li>
+              
+            
+            
+              
+              
+                <li class="nav-item">
+                  <a class="nav-link" href="/#education">Education</a>
+                </li>
+              
+            
+            
+            
+            
+          
+        
+        
+          <div id="top-navbar-divider"></div>
+        
+        
+          <li class="nav-item">
+            <a class="nav-link" id="blog-link" href="/posts">Posts</a>
+          </li>
+        
+        
+        
+        
+        
       </ul>
     </div>
   </div>
@@ -171,27 +271,31 @@
       
       
       
+      
         
           <div class="post-card">
-  <a href="/posts/nerf/barf/" class="post-card-link">
-    <div class="card">
-      <div class="card-head">
+  <div class="card">
+    <div class="card-head">
+      <a href="/posts/nerf/barf/" class="post-card-link">
         <img class="card-img-top" src='/images/default-hero.jpg' alt="Hero Image">
-      </div>
-      <div class="card-body">
+      </a>
+    </div>
+    <div class="card-body">
+      <a href="/posts/nerf/barf/" class="post-card-link">
         <h5 class="card-title">BARF : Bundle-Adjusting Neural Radiance Fields</h5>
         <p class="card-text post-summary">해당 논문에 대한 리뷰 영상은 아래 동영상을 통해서도 확인하실 수 있습니다. Intro Original NeRF 논문은 처음 ECCV 2020에서 발표되었을 때, 뉴럴 렌더링 부분에 있어 굉장히 큰 화두가 되었다. 그와 동시에 많은 한계점들을 가지고 있어서 많은 연구자들로부터 그 문제점들이 지속적으로 지적되어 왔다. 이번에 리뷰할 BARF 논문에서는 그 중에서 Original NeRF가 입력 데이터로 정확한 Camera pose를 요구하고 있다는 점을 지적하고 있는데, 다시 말하면 입력 이미지 데이터와 한 쌍으로 있을 transformation 값이 부정확하거나 알 수 없을 경우에는 뉴럴 렌더링의 정확도가 떨어지게 된다는 것이다.</p>
-      </div>
-      <div class="card-footer">
-        <span class="float-left">February 17, 2023</span>
-        <a
-        href="/posts/nerf/barf/"
-        class="float-right btn btn-outline-info btn-sm"
-        >Read</a
-        >
-      </div>
+      </a>
+      
     </div>
-  </a>
+    <div class="card-footer">
+      <span class="float-start">
+          Friday, February 17, 2023
+          </span>
+      <a
+      href="/posts/nerf/barf/"
+      class="float-end btn btn-outline-info btn-sm">Read</a>
+    </div>
+  </div>
 </div>
 
         
@@ -269,7 +373,7 @@
 
   <footer id="footer" class="container-fluid text-center align-content-center footer pb-2">
     <div class="container pt-5">
-      <div class="row text-left">
+      <div class="row text-start">
         
         <div class="col-md-4 col-sm-12">
           <h5>Navigation</h5>
@@ -344,7 +448,7 @@
     
     <hr />
     <div class="container">
-      <div class="row text-left">
+      <div class="row text-start">
         <div class="col-md-4">
           <a id="theme" href="https://github.com/hugo-toha/toha" target="_blank" rel="noopener">
             <img src="/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_3.png" alt="Toha Theme Logo">
@@ -352,7 +456,7 @@
           </a>
         </div>
         <div class="col-md-4 text-center">© 2022 Copyright.</div>
-        <div class="col-md-4 text-right">
+        <div class="col-md-4 text-end">
           <a id="hugo" href="https://gohugo.io/" target="_blank" rel="noopener">Powered by
           <img
             src="/images/hugo-logo.svg"
@@ -368,7 +472,6 @@
 
 
     <script src="/scripts/application.js" integrity="" defer></script>
-
 
 
     

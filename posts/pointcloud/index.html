@@ -32,10 +32,21 @@
 
 
 
-</head>
+<script>
+      theme = localStorage.getItem('darkmode:color-scheme') || 'system';
+      if (theme == 'system') {
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          theme = 'dark';
+        } else {
+          theme = 'light';
+        }
+      }
+      document.documentElement.setAttribute('data-theme', theme);
+    </script>
+  </head>
 
-  <body class="type-posts kind-section" data-spy="scroll" data-target="#TableOfContents" data-offset="80">
-    <div class="container-fluid bg-dimmed wrapper">
+  <body class="type-posts kind-section" data-bs-spy="scroll" data-bs-target="#TableOfContents" data-bs-offset="80">
+    <div class="container-fluid bg-secondary wrapper">
       
       
     
@@ -45,27 +56,116 @@
 
 
 
+  
 
 
 
 
 
 
-<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+<nav class="navbar navbar-expand-xl top-navbar shadow " id="top-navbar">
   <div class="container">
-      <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button">
-      <span class="navbar-toggler-icon"></span>
+    
+    <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button">
+      <i data-feather="sidebar"></i>
     </button>
+    
     <a class="navbar-brand" href="/">
       Vision Shrimp</a>
-    <button class="navbar-toggler navbar-light" id="toc-toggler" type="button">
-      <span class="navbar-toggler-icon"></span>
+    <button
+      class="navbar-toggler navbar-light"
+      id="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#top-nav-items"
+      aria-label="menu"
+    >
+      <i data-feather="menu"></i>
     </button>
 
-    <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
-      <ul class="navbar-nav ml-auto">
-      
-      
+    <div class="collapse navbar-collapse dynamic-navbar" id="top-nav-items">
+      <ul class="nav navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/#home">Home</a>
+        </li>
+        
+          
+          
+            
+              
+              
+                <li class="nav-item">
+                  <a class="nav-link" href="/#recent-posts">Recent Posts</a>
+                </li>
+              
+            
+            
+              
+              
+                <li class="nav-item">
+                  <a class="nav-link" href="/#about">About</a>
+                </li>
+              
+            
+            
+            
+              
+              
+                <li class="nav-item">
+                  <a class="nav-link" href="/#experiences">Experiences</a>
+                </li>
+              
+            
+            
+              
+              
+                <li class="nav-item">
+                  <a class="nav-link" href="/#education">Education</a>
+                </li>
+              
+            
+            
+            
+            
+          
+        
+        
+          <div id="top-navbar-divider"></div>
+        
+        
+          <li class="nav-item">
+            <a class="nav-link" id="blog-link" href="/posts">Posts</a>
+          </li>
+        
+        
+        
+        
+        
       </ul>
     </div>
   </div>
@@ -99,7 +199,7 @@
   
     
     <li>
-      <i class="fas fa-plus-circle"></i><a class="" href="/posts/neural_networks/">Neural Networks</a>
+      <i data-feather="plus-circle"></i><a class=" list-link" href="/posts/neural_networks/"> Neural Networks</a>
       
       <ul class="">
         
@@ -109,7 +209,7 @@
   
   
     
-    <li><a class="" href="/posts/neural_networks/cnn_basics/" title="CNN 기본 (1)">CNN 기본 (1)</a></li>
+    <li><a class=" list-link" href="/posts/neural_networks/cnn_basics/" title="CNN 기본 (1)">CNN 기본 (1)</a></li>
   
 
 
@@ -124,7 +224,7 @@
   
     
     <li>
-      <i class="fas fa-plus-circle"></i><a class="" href="/posts/nerf/">NeRF</a>
+      <i data-feather="plus-circle"></i><a class=" list-link" href="/posts/nerf/"> NeRF</a>
       
       <ul class="">
         
@@ -134,7 +234,7 @@
   
   
     
-    <li><a class="" href="/posts/nerf/infonerf/" title="InfoNeRF 논문 리뷰">InfoNeRF 논문 리뷰</a></li>
+    <li><a class=" list-link" href="/posts/nerf/infonerf/" title="InfoNeRF 논문 리뷰">InfoNeRF 논문 리뷰</a></li>
   
 
   
@@ -143,7 +243,7 @@
   
   
     
-    <li><a class="" href="/posts/nerf/barf/" title="BARF 논문 리뷰">BARF 논문 리뷰</a></li>
+    <li><a class=" list-link" href="/posts/nerf/barf/" title="BARF 논문 리뷰">BARF 논문 리뷰</a></li>
   
 
 
@@ -161,7 +261,7 @@
   
     
     <li>
-      <i class="fas fa-minus-circle"></i><a class="active" href="/posts/pointcloud/">Point Cloud Processing</a>
+      <i data-feather="minus-circle"></i><a class="active list-link" href="/posts/pointcloud/"> Point Cloud Processing</a>
       
       <ul class="active">
         
@@ -171,7 +271,7 @@
   
   
     
-    <li><a class="" href="/posts/pointcloud/pointnet/" title="PointNet 논문 리뷰">PointNet 논문 리뷰</a></li>
+    <li><a class=" list-link" href="/posts/pointcloud/pointnet/" title="PointNet 논문 리뷰">PointNet 논문 리뷰</a></li>
   
 
 
@@ -196,27 +296,31 @@
       
       
       
+      
         
           <div class="post-card">
-  <a href="/posts/pointcloud/pointnet/" class="post-card-link">
-    <div class="card">
-      <div class="card-head">
+  <div class="card">
+    <div class="card-head">
+      <a href="/posts/pointcloud/pointnet/" class="post-card-link">
         <img class="card-img-top" src='/images/default-hero.jpg' alt="Hero Image">
-      </div>
-      <div class="card-body">
+      </a>
+    </div>
+    <div class="card-body">
+      <a href="/posts/pointcloud/pointnet/" class="post-card-link">
         <h5 class="card-title">PointNet</h5>
         <p class="card-text post-summary">Intro 컨볼루션 신경망(CNN)은 정규적인 형태의 데이터 포맷을 요구하는 것으로 잘 알려져 있으며, 이는 CNN이 데이터의 공간적 계층 구조를 학습할 때 슬라이딩 윈도우 기법을 사용해 로컬 특징을 추출하고, 단일 커널로 전체 영역에 걸쳐 가중치를 공유하는 방식에서 비롯된다. 그러나 3차원 데이터는 대체로 정규적이지 않은 경우가 많고, 포인트 클라우드나 메쉬 같은 데이터 형식이 이에 해당한다. 이를 처리하기 위해, 과거에는 데이터를 복셀화하거나 다양한 뷰포인트에 해당하는 이미지 세트로 투영하는 방법이 사용되었으나, 이 방식은 불필요한 공간까지 표현해 연산을 비효율적으로 만드는 단점이 있다.</p>
-      </div>
-      <div class="card-footer">
-        <span class="float-left">November 6, 2023</span>
-        <a
-        href="/posts/pointcloud/pointnet/"
-        class="float-right btn btn-outline-info btn-sm"
-        >Read</a
-        >
-      </div>
+      </a>
+      
     </div>
-  </a>
+    <div class="card-footer">
+      <span class="float-start">
+          Monday, November 6, 2023
+          </span>
+      <a
+      href="/posts/pointcloud/pointnet/"
+      class="float-end btn btn-outline-info btn-sm">Read</a>
+    </div>
+  </div>
 </div>
 
         
@@ -294,7 +398,7 @@
 
   <footer id="footer" class="container-fluid text-center align-content-center footer pb-2">
     <div class="container pt-5">
-      <div class="row text-left">
+      <div class="row text-start">
         
         <div class="col-md-4 col-sm-12">
           <h5>Navigation</h5>
@@ -369,7 +473,7 @@
     
     <hr />
     <div class="container">
-      <div class="row text-left">
+      <div class="row text-start">
         <div class="col-md-4">
           <a id="theme" href="https://github.com/hugo-toha/toha" target="_blank" rel="noopener">
             <img src="/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_3.png" alt="Toha Theme Logo">
@@ -377,7 +481,7 @@
           </a>
         </div>
         <div class="col-md-4 text-center">© 2022 Copyright.</div>
-        <div class="col-md-4 text-right">
+        <div class="col-md-4 text-end">
           <a id="hugo" href="https://gohugo.io/" target="_blank" rel="noopener">Powered by
           <img
             src="/images/hugo-logo.svg"
@@ -393,7 +497,6 @@
 
 
     <script src="/scripts/application.js" integrity="" defer></script>
-
 
 
     
